@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/MyButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="IncrementCounterBehavior" />
+    <EditText
+        android:id="@+id/MyEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="HideKeyboardOnEnterKeyBehavior"
+        android:singleLine="true" />
+    <EditText
+        android:id="@+id/MySecondEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="SelectAllOnFocusBehavior"
+        android:singleLine="true" />
+    <Button
+        android:id="@+id/MySecondButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="EventToCommandBehavior" />
+</LinearLayout>
