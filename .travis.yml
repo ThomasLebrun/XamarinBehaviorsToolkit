@@ -1,4 +1,0 @@
-language: csharp
-solution: src/XamarinBehaviorsToolkit.sln
-install:
-- nuget restore src/XamarinBehaviorsToolkit.sln
