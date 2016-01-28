@@ -1,2 +1,4 @@
 language: csharp
 solution: XamarinBehaviorsToolkit.sln
+install:
+	- nuget restore src/XamarinBehaviorsToolkit.sln
