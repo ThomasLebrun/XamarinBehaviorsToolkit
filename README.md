@@ -25,24 +25,44 @@ mySecondEditText.AttachBehavior(new SelectAllOnFocusBehavior());
 
 Xamarin Behavior Toolkit implement the same architecture as the Microsoft behaviors which can be used in any XAML application. To create your own behavior, you just have to inherit from the **Behavior<T>** class and override the methods **OnAttached** and/or **OnDetaching**. To reference the control on which the behavior is attached, you can access the property **AssociatedObject**:
 ```cs
-public class SelectAllOnFocusBehavior : Behavior<EditText>
+/// <summary>
+/// Behavior used on an EditText object and used to hide the software keyboard when one of the following key is pressed: "Done", "Search" or "Go"
+/// </summary>
+public class HideKeyboardOnEnterKeyBehavior : Behavior<EditText>
 {
-    private EventHandler<View.FocusChangeEventArgs> _focusChangeEventHandler;
-    
+    /// <summary>
+    /// Gets or sets the application context.
+    /// </summary>
+    /// <value>
+    /// The application context.
+    /// </value>
+    public Context ApplicationContext { get; set; }
+
+    private EventHandler<TextView.EditorActionEventArgs> _editorActionEventHandler;
+
     /// <summary>
     /// Method to override when the behavior is attached to the view.
     /// </summary>
+    /// <exception cref="System.InvalidOperationException">ApplicationContext property needs to be set in order to use this behavior.</exception>
     protected override void OnAttached()
     {
-        _focusChangeEventHandler = (sender, args) =>
+        if (this.ApplicationContext == null)
         {
-            if (args.HasFocus)
+            throw new InvalidOperationException("ApplicationContext property needs to be set in order to use this behavior.");
+        }
+
+        _editorActionEventHandler = (sender, args) =>
+        {
+            if (args.ActionId == ImeAction.Done || args.ActionId == ImeAction.Search || args.ActionId == ImeAction.Go || args.ActionId == ImeAction.Next)
             {
-                this.AssociatedObject.SelectAll();
+                var inputManager = (InputMethodManager)this.ApplicationContext.GetSystemService(Context.InputMethodService);
+                inputManager.HideSoftInputFromWindow(this.AssociatedObject.WindowToken, HideSoftInputFlags.None);
+
+                args.Handled = true;
             }
         };
 
-        this.AssociatedObject.FocusChange += _focusChangeEventHandler;
+        this.AssociatedObject.EditorAction += _editorActionEventHandler;
     }
 
     /// <summary>
@@ -50,9 +70,9 @@ public class SelectAllOnFocusBehavior : Behavior<EditText>
     /// </summary>
     protected override void OnDetaching()
     {
-        if (_focusChangeEventHandler != null)
+        if (_editorActionEventHandler != null)
         {
-            this.AssociatedObject.FocusChange -= _focusChangeEventHandler;
+            this.AssociatedObject.EditorAction -= _editorActionEventHandler;
         }
     }
 }
