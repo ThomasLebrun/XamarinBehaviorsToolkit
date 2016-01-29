@@ -34,7 +34,7 @@ namespace Xamarin.Android.Behaviors.Command
         /// Method to override when the behavior is attached to the view.
         /// </summary>
         /// <exception cref="System.InvalidOperationException">Exception raised when the specified event is not found on the corresponding type.</exception>
-        public override void OnAttached() 
+        protected override void OnAttached() 
         {
             var eventInfo = this.AssociatedObject.GetType().GetEvent(_eventName);
             if (eventInfo != null)
@@ -74,7 +74,7 @@ namespace Xamarin.Android.Behaviors.Command
         /// <summary>
         /// Method to override when the behavior is removed from the view.
         /// </summary>
-        public override void OnDetaching()
+        protected override void OnDetaching()
         {
             if (_dynamicEventHandlersList != null && _dynamicEventHandlersList.Any())
             {

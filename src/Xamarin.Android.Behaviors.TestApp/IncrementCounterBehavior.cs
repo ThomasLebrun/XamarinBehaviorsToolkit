@@ -11,7 +11,7 @@ namespace Xamarin.Android.Behaviors.TestApp
         private int _counter;
         private EventHandler _clickEventHandler;
 
-        public override void OnAttached()
+        protected override void OnAttached()
         {
             this.AssociatedObject.Text = _counter.ToString();
 
@@ -25,7 +25,7 @@ namespace Xamarin.Android.Behaviors.TestApp
             this.AssociatedObject.Click += _clickEventHandler;
         }
 
-        public override void OnDetaching()
+        protected override void OnDetaching()
         {
             if (_clickEventHandler != null)
             {

@@ -25,4 +25,16 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="EventToCommandBehavior" />
+    <EditText
+        android:id="@+id/MyThirdEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="BorderColoredEditTextBehavior"
+        android:singleLine="true" />
+    <EditText
+        android:id="@+id/MyFourthEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="RoundCornerEditTextBehavior"
+        android:singleLine="true" />
 </LinearLayout>

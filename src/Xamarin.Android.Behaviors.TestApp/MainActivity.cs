@@ -1,10 +1,12 @@
 ﻿using System.Windows.Input;
 using Android.App;
+using Android.Graphics;
 using Android.Widget;
 using Android.OS;
 using Xamarin.Android.Behaviors.Command;
 using Xamarin.Android.Behaviors.Input;
 using Xamarin.Android.Behaviors.TestApp.Helpers;
+using Xamarin.Android.Behaviors.Views;
 
 namespace Xamarin.Android.Behaviors.TestApp
 {
@@ -40,6 +42,13 @@ namespace Xamarin.Android.Behaviors.TestApp
 
             var secondButton = FindViewById<Button>(Resource.Id.MySecondButton);
             secondButton.AttachBehavior(new EventToCommandBehavior("Click", this.TestCommand));
+
+            var myThirdEditText = FindViewById<EditText>(Resource.Id.MyThirdEditText);
+            myThirdEditText.AttachBehavior(new BorderColoredEditTextBehavior { Color = Color.Red, StrokeWidth = 15 });
+            myThirdEditText.AttachBehavior(new SelectAllOnFocusBehavior());
+
+            var myFourthEditText = FindViewById<EditText>(Resource.Id.MyFourthEditText);
+            myFourthEditText.AttachBehavior(new RoundCornerEditTextBehavior { BackgroundColor = Color.Blue, CornerRadius = 30 });
         }
     }
 }

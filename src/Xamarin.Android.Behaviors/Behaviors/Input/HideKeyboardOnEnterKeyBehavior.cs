@@ -24,7 +24,7 @@ namespace Xamarin.Android.Behaviors.Input
         /// Method to override when the behavior is attached to the view.
         /// </summary>
         /// <exception cref="System.InvalidOperationException">ApplicationContext property needs to be set in order to use this behavior.</exception>
-        public override void OnAttached()
+        protected override void OnAttached()
         {
             if (this.ApplicationContext == null)
             {
@@ -33,7 +33,7 @@ namespace Xamarin.Android.Behaviors.Input
 
             _editorActionEventHandler = (sender, args) =>
             {
-                if (args.ActionId == ImeAction.Done || args.ActionId == ImeAction.Search || args.ActionId == ImeAction.Go)
+                if (args.ActionId == ImeAction.Done || args.ActionId == ImeAction.Search || args.ActionId == ImeAction.Go || args.ActionId == ImeAction.Next)
                 {
                     var inputManager = (InputMethodManager)this.ApplicationContext.GetSystemService(Context.InputMethodService);
                     inputManager.HideSoftInputFromWindow(this.AssociatedObject.WindowToken, HideSoftInputFlags.None);
@@ -48,7 +48,7 @@ namespace Xamarin.Android.Behaviors.Input
         /// <summary>
         /// Method to override when the behavior is removed from the view.
         /// </summary>
-        public override void OnDetaching()
+        protected override void OnDetaching()
         {
             if (_editorActionEventHandler != null)
             {

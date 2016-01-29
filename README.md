@@ -32,7 +32,7 @@ public class SelectAllOnFocusBehavior : Behavior<EditText>
     /// <summary>
     /// Method to override when the behavior is attached to the view.
     /// </summary>
-    public override void OnAttached()
+    protected override void OnAttached()
     {
         _focusChangeEventHandler = (sender, args) =>
         {
@@ -48,7 +48,7 @@ public class SelectAllOnFocusBehavior : Behavior<EditText>
     /// <summary>
     /// Method to override when the behavior is removed from the view.
     /// </summary>
-    public override void OnDetaching()
+    protected override void OnDetaching()
     {
         if (_focusChangeEventHandler != null)
         {

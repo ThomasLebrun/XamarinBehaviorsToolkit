@@ -5,50 +5,51 @@ namespace Xamarin.Android.Behaviors
     /// <summary>
     /// Base class for all the behaviors.
     /// </summary>
-    /// <typeparam name="T">Type of the view on which the behavior will be attached.</typeparam>
+    /// <typeparam name="T">Type of the associatedObject on which the behavior will be attached.</typeparam>
     public abstract class Behavior<T> where T : View
     {
         /// <summary>
-        /// Gets or sets the associated object.
+        /// Gets the object associated to the behavior.
         /// </summary>
         /// <value>
         /// The associated object.
         /// </value>
-        public T AssociatedObject { get; private set; }
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        protected T AssociatedObject { get; private set; }
 
         /// <summary>
-        /// Attaches the behavior to the specified view.
+        /// Attaches the behavior to the specified associatedObject.
         /// </summary>
-        /// <param name="view">The view.</param>
-        internal void Attach(T view)
+        /// <param name="associatedObject">The associatedObject.</param>
+        internal void Attach(T associatedObject)
         {
-            this.AssociatedObject = view;
+            this.AssociatedObject = associatedObject;
 
             this.OnAttached();
         }
 
         /// <summary>
-        /// Removes the behavior from the specified view.
+        /// Removes the behavior from the specified associatedObject.
         /// </summary>
-        /// <param name="view">The view.</param>
-        internal void Remove(T view)
+        /// <param name="associatedObject">The associatedObject.</param>
+        internal void Remove(T associatedObject)
         {
-            this.AssociatedObject = view;
+            this.AssociatedObject = associatedObject;
 
             this.OnDetaching();
         }
 
         /// <summary>
-        /// Method to override when the behavior is attached to the view.
+        /// Method to override when the behavior is attached to the associatedObject.
         /// </summary>
-        public virtual void OnAttached()
+        protected virtual void OnAttached()
         {
         }
 
         /// <summary>
-        /// Method to override when the behavior is removed from the view.
+        /// Method to override when the behavior is removed from the associatedObject.
         /// </summary>
-        public virtual void OnDetaching()
+        protected virtual void OnDetaching()
         {
         }
     }
