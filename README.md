@@ -80,6 +80,7 @@ public class HideKeyboardOnEnterKeyBehavior : Behavior<EditText>
 
 ## Todo
  - Implement behaviors architecture for Xamarin.iOS projects
+ - Create Nuget Packages (for both Android & iOS)
  - Add built-in behaviors for Xamarin.iOS projects
  - Add more built-in behaviors for Xamarin.Android projects
 

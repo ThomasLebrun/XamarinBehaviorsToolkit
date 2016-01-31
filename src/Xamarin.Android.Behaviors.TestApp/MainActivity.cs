@@ -44,8 +44,7 @@ namespace Xamarin.Android.Behaviors.TestApp
             secondButton.AttachBehavior(new EventToCommandBehavior("Click", this.TestCommand));
 
             var myThirdEditText = FindViewById<EditText>(Resource.Id.MyThirdEditText);
-            myThirdEditText.AttachBehavior(new BorderColoredEditTextBehavior { Color = Color.Red, StrokeWidth = 15 });
-            myThirdEditText.AttachBehavior(new SelectAllOnFocusBehavior());
+            myThirdEditText.AttachBehaviors(new BorderColoredEditTextBehavior { Color = Color.Red, StrokeWidth = 15 }, new SelectAllOnFocusBehavior());
 
             var myFourthEditText = FindViewById<EditText>(Resource.Id.MyFourthEditText);
             myFourthEditText.AttachBehavior(new RoundCornerEditTextBehavior { BackgroundColor = Color.Blue, CornerRadius = 30 });

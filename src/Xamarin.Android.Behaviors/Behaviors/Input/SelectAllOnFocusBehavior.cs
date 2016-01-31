@@ -1,5 +1,3 @@
-using System;
-using Android.Views;
 using Android.Widget;
 
 namespace Xamarin.Android.Behaviors.Input

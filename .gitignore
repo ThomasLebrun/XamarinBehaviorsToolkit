@@ -1,2 +1,14 @@
 *.suo
 *.DotSettings
+*.mdb
+*.dll
+*.class
+*.dex
+*.pdb
+*.jar
+*.java
+*.mj
+*.flag
+*.props
+*.cache
+*.jm
