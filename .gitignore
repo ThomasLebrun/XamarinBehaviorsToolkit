@@ -12,3 +12,4 @@
 *.props
 *.cache
 *.jm
+*.force

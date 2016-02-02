@@ -10,6 +10,9 @@ Since I work with Xamarin, I've always thought  it could be a good idea to get t
 
 So welcome to the home of the **Xamarin Behaviors Toolkit**, a custom implementation of the XAML behaviors for the Xamarin (Android / iOS) projects!
 
+## Nuget
+Get the packages from [Nuget](https://www.nuget.org/packages/Xamarin.Behaviors.Toolkit/)
+
 ## Code Example
  **Using a behavior**
  
@@ -80,7 +83,7 @@ public class HideKeyboardOnEnterKeyBehavior : Behavior<EditText>
 
 ## Todo
  - Implement behaviors architecture for Xamarin.iOS projects
- - Create Nuget Packages (for both Android & iOS)
+ - Update Nuget Packages to include the behaviors for Xamarin.iOS
  - Add built-in behaviors for Xamarin.iOS projects
  - Add more built-in behaviors for Xamarin.Android projects
 
