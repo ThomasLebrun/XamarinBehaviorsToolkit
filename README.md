@@ -10,8 +10,9 @@ Since I work with Xamarin, I've always thought  it could be a good idea to get t
 
 So welcome to the home of the **Xamarin Behaviors Toolkit**, a custom implementation of the XAML behaviors for the Xamarin (Android / iOS) projects!
 
-## Nuget
-Get the packages from [Nuget](https://www.nuget.org/packages/Xamarin.Behaviors.Toolkit/)
+## Current Release
+ Current release (**0.0.1**) is available from Nuget:
+ https://www.nuget.org/packages/Xamarin.Behaviors.Toolkit/
 
 ## Code Example
  **Using a behavior**
@@ -26,7 +27,7 @@ mySecondEditText.AttachBehavior(new SelectAllOnFocusBehavior());
 
 **Creating a behavior**
 
-Xamarin Behavior Toolkit implement the same architecture as the Microsoft behaviors which can be used in any XAML application. To create your own behavior, you just have to inherit from the **Behavior<T>** class and override the methods **OnAttached** and/or **OnDetaching**. To reference the control on which the behavior is attached, you can access the property **AssociatedObject**:
+Xamarin Behavior Toolkit implement the same architecture as the Microsoft behaviors which can be used in any XAML application. To create your own behavior, you just have to inherit from the **Behavior\<T\>** class and override the methods **OnAttached** and/or **OnDetaching**. To reference the control on which the behavior is attached, you can access the property **AssociatedObject**:
 ```cs
 /// <summary>
 /// Behavior used on an EditText object and used to hide the software keyboard when one of the following key is pressed: "Done", "Search" or "Go"
