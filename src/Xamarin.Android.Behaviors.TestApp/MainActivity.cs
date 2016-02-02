@@ -1,12 +1,13 @@
 ﻿using System.Windows.Input;
 using Android.App;
+using Android.Behaviors;
+using Android.Behaviors.Command;
+using Android.Behaviors.Input;
+using Android.Behaviors.Views;
 using Android.Graphics;
 using Android.Widget;
 using Android.OS;
-using Xamarin.Android.Behaviors.Command;
-using Xamarin.Android.Behaviors.Input;
 using Xamarin.Android.Behaviors.TestApp.Helpers;
-using Xamarin.Android.Behaviors.Views;
 
 namespace Xamarin.Android.Behaviors.TestApp
 {
