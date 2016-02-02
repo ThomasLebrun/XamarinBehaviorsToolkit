@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Xamarin.Android.Behaviors.Resource", IsApplication=false)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Android.Behaviors.Resource", IsApplication=false)]
 
-namespace Xamarin.Android.Behaviors
+namespace Android.Behaviors
 {
 	
 	

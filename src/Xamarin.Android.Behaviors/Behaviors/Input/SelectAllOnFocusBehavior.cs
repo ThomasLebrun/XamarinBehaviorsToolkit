@@ -1,6 +1,6 @@
 using Android.Widget;
 
-namespace Xamarin.Android.Behaviors.Input
+namespace Android.Behaviors.Input
 {
     /// <summary>
     /// Behavior used on an EditText object and used to select all the text within it when it has focus

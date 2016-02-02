@@ -2,17 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Xamarin.Behaviors.Toolkit</id>
-        <version>0.0.1</version>
-        <title>Xamarin Behaviors Toolkit</title>
+        <version>0.0.2</version>
+        <title>Behaviors Toolkit for Xamarin</title>
         <authors>Thomas LEBRUN</authors>
         <owners>Thomas LEBRUN</owners>
         <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <description>This package contains built-in behaviors for Xamarin (Android / iOS) applications and the core classes to create new ones.
 
-Get more information about the Xamarin Behaviors Toolkit at https://github.com/ThomasLebrun/XamarinBehaviorsToolkit</description>
+Get more information about the Behaviors Toolkit for Xamarin at https://github.com/ThomasLebrun/XamarinBehaviorsToolkit</description>
         <language>en-US</language>
-        <tags>behaviors xamarin toolokit android ios uwp winrt windows extensibility extensions</tags>
+        <tags>behaviors xamarin toolkit android ios uwp winrt windows extensibility extensions</tags>
     </metadata>
     <files>
         <file src="src\Xamarin.Android.Behaviors\bin\Release\Xamarin.Android.Behaviors.dll" target="lib\MonoAndroid10\Xamarin.Android.Behaviors.dll" />

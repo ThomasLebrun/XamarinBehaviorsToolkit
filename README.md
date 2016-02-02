@@ -1,5 +1,5 @@
-# **Xamarin Behaviors Toolkit**
-Xamarin Behaviors Toolkit is an easy-to-use means of adding common and reusable interactivity to your Xamarin applications with minimal code. Use of Xamarin Behaviors Toolkit is governed by the MIT License.
+# **Behaviors Toolkit for Xamarin**
+Behaviors Toolkit for Xamarin is an easy-to-use means of adding common and reusable interactivity to your Xamarin applications with minimal code. Use of Behaviors Toolkit for Xamarin is governed by the MIT License.
 
 ## Build Status
 [![Build status](https://ci.appveyor.com/api/projects/status/goi8xb7yjvdvbcdk?svg=true)](https://ci.appveyor.com/project/ThomasLebrun/xamarinbehaviorstoolkit)
@@ -8,7 +8,7 @@ Xamarin Behaviors Toolkit is an easy-to-use means of adding common and reusable 
 As a primary Windows (XAML) developer, I've always enjoyed using the behaviors to easily add, with just some lines of code, some great features to any controls.
 Since I work with Xamarin, I've always thought  it could be a good idea to get this functionality in the Xamarin projects.
 
-So welcome to the home of the **Xamarin Behaviors Toolkit**, a custom implementation of the XAML behaviors for the Xamarin (Android / iOS) projects!
+So welcome to the home of the **Behaviors Toolkit for Xamarin**, a custom implementation of the XAML behaviors for the Xamarin (Android / iOS) projects!
 
 ## Current Release
  Current release (**0.0.1**) is available from Nuget:

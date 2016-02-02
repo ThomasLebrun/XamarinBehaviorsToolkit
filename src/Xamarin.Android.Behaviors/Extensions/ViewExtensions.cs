@@ -1,7 +1,7 @@
 using System;
 using Android.Views;
 
-namespace Xamarin.Android.Behaviors
+namespace Android.Behaviors
 {
     /// <summary>
     /// Extension method for the View object, allowing the behavior to be attached and removed.

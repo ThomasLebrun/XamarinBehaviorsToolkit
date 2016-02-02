@@ -3,7 +3,7 @@ using Android.Content;
 using Android.Views.InputMethods;
 using Android.Widget;
 
-namespace Xamarin.Android.Behaviors.Input
+namespace Android.Behaviors.Input
 {
     /// <summary>
     /// Behavior used on an EditText object and used to hide the software keyboard when one of the following key is pressed: "Done", "Search" or "Go"

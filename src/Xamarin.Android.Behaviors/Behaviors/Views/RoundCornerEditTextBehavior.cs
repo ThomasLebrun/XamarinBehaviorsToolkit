@@ -2,7 +2,7 @@ using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.Widget;
 
-namespace Xamarin.Android.Behaviors.Views
+namespace Android.Behaviors.Views
 {
     public class RoundCornerEditTextBehavior : Behavior<EditText>
     {

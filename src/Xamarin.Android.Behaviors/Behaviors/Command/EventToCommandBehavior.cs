@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Windows.Input;
 using Android.Views;
 
-namespace Xamarin.Android.Behaviors.Command
+namespace Android.Behaviors.Command
 {
     public class EventToCommandBehavior : Behavior<View>
     {

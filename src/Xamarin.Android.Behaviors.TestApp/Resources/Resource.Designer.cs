@@ -26,8 +26,8 @@ namespace Xamarin.Android.Behaviors.TestApp
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Android.Behaviors.Resource.String.ApplicationName = global::Xamarin.Android.Behaviors.TestApp.Resource.String.ApplicationName;
-			global::Xamarin.Android.Behaviors.Resource.String.Hello = global::Xamarin.Android.Behaviors.TestApp.Resource.String.Hello;
+			global::Android.Behaviors.Resource.String.ApplicationName = global::Xamarin.Android.Behaviors.TestApp.Resource.String.ApplicationName;
+			global::Android.Behaviors.Resource.String.Hello = global::Xamarin.Android.Behaviors.TestApp.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

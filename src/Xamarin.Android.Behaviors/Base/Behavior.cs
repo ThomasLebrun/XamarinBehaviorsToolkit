@@ -1,6 +1,6 @@
 using Android.Views;
 
-namespace Xamarin.Android.Behaviors
+namespace Android.Behaviors
 {
     /// <summary>
     /// Base class for all the behaviors.
