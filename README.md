@@ -11,7 +11,7 @@ Since I work with Xamarin, I've always thought  it could be a good idea to get t
 So welcome to the home of the **Behaviors Toolkit for Xamarin**, a custom implementation of the XAML behaviors for the Xamarin (Android / iOS) projects!
 
 ## Current Release
- Current release (**0.0.1**) is available from Nuget:
+ Current release (**0.0.2**) is available from Nuget:
  https://www.nuget.org/packages/Xamarin.Behaviors.Toolkit/
 
 ## Code Example
