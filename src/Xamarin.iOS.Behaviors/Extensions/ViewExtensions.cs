@@ -1,6 +1,6 @@
-using Android.Views;
+using UIKit;
 
-namespace Android.Behaviors
+namespace iOS.Behaviors
 {
     /// <summary>
     /// Extension method for the View object, allowing the behavior to be attached and removed.
@@ -13,7 +13,7 @@ namespace Android.Behaviors
         /// <typeparam name="T">Type of the view on which the behavior will be attached.</typeparam>
         /// <param name="view">The view.</param>
         /// <param name="behavior">The behavior to add to the view.</param>
-        public static void AttachBehavior<T>(this T view, Behavior<T> behavior) where T : View
+        public static void AttachBehavior<T>(this T view, Behavior<T> behavior) where T : UIView
         {
             behavior.Attach(view);
         }
@@ -24,7 +24,7 @@ namespace Android.Behaviors
         /// <typeparam name="T">Type of the view on which the behavior will be attached.</typeparam>
         /// <param name="view">The view.</param>
         /// <param name="behaviors">The behaviors to add to the view.</param>
-        public static void AttachBehaviors<T>(this T view, params Behavior<T>[] behaviors) where T : View
+        public static void AttachBehaviors<T>(this T view, params Behavior<T>[] behaviors) where T : UIView
         {
             foreach (var behavior in behaviors)
             {
@@ -38,7 +38,7 @@ namespace Android.Behaviors
         /// <typeparam name="T">Type of the view on which the behavior will be removed.</typeparam>
         /// <param name="view">The view.</param>
         /// <param name="behavior">The behavior.</param>
-        public static void RemoveBehavior<T>(this T view, Behavior<T> behavior) where T : View
+        public static void RemoveBehavior<T>(this T view, Behavior<T> behavior) where T : UIView
         {
             behavior.Remove();
         }
@@ -49,7 +49,7 @@ namespace Android.Behaviors
         /// <typeparam name="T">Type of the view on which the behavior will be removed.</typeparam>
         /// <param name="view">The view.</param>
         /// <param name="behaviors">The behavior to remove from the view.</param>
-        public static void RemoveBehaviors<T>(this T view, params Behavior<T>[] behaviors) where T : View
+        public static void RemoveBehaviors<T>(this T view, params Behavior<T>[] behaviors) where T : UIView
         {
             foreach (var behavior in behaviors)
             {

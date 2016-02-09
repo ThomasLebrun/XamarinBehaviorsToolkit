@@ -1,12 +1,12 @@
-using Android.Views;
+using UIKit;
 
-namespace Android.Behaviors
+namespace iOS.Behaviors
 {
     /// <summary>
     /// Base class for all the behaviors.
     /// </summary>
     /// <typeparam name="T">Type of the associatedObject on which the behavior will be attached.</typeparam>
-    public abstract class Behavior<T> where T : View
+    public abstract class Behavior<T> where T : UIView
     {
         /// <summary>
         /// Gets the object associated to the behavior.

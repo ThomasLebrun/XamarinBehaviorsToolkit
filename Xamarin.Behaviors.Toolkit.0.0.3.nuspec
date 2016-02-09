@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Xamarin.Behaviors.Toolkit</id>
-        <version>0.0.2</version>
+        <version>0.0.3</version>
         <title>Behaviors Toolkit for Xamarin</title>
         <authors>Thomas LEBRUN</authors>
         <owners>Thomas LEBRUN</owners>
@@ -16,5 +16,6 @@ Get more information about the Behaviors Toolkit for Xamarin at https://github.c
     </metadata>
     <files>
         <file src="src\Xamarin.Android.Behaviors\bin\Release\Xamarin.Android.Behaviors.dll" target="lib\MonoAndroid10\Xamarin.Android.Behaviors.dll" />
+        <file src="src\Xamarin.iOS.Behaviors\bin\iPhone\Release\Xamarin.iOS.Behaviors.dll" target="lib\Xamarin.iOS10\Xamarin.iOS.Behaviors.dll" />
     </files>
 </package>

@@ -1,5 +1,5 @@
-# **Behaviors Toolkit for Xamarin**
-Behaviors Toolkit for Xamarin is an easy-to-use means of adding common and reusable interactivity to your Xamarin applications with minimal code. Use of Behaviors Toolkit for Xamarin is governed by the MIT License.
+# **The Behaviors Toolkit for Xamarin**
+The Behaviors Toolkit for Xamarin is an easy-to-use means of adding common and reusable interactivity to your Xamarin applications with minimal code. Use of the Behaviors Toolkit for Xamarin is governed by the MIT License.
 
 ## Build Status
 [![Build status](https://ci.appveyor.com/api/projects/status/goi8xb7yjvdvbcdk?svg=true)](https://ci.appveyor.com/project/ThomasLebrun/xamarinbehaviorstoolkit)
@@ -11,7 +11,7 @@ Since I work with Xamarin, I've always thought  it could be a good idea to get t
 So welcome to the home of the **Behaviors Toolkit for Xamarin**, a custom implementation of the XAML behaviors for the Xamarin (Android / iOS) projects!
 
 ## Current Release
- Current release (**0.0.2**) is available from Nuget:
+ Current release (**0.0.3**) is available from Nuget:
  https://www.nuget.org/packages/Xamarin.Behaviors.Toolkit/
 
 ## Code Example
@@ -19,7 +19,7 @@ So welcome to the home of the **Behaviors Toolkit for Xamarin**, a custom implem
  
  To attach a behavior to a control (Button, EditText, etc.), you just have to use the **AttachBehavior** method.
 
- Take a look at the following code sample showing how to use a behavior in an application, just with a snippet of code:
+ Take a look at the following code sample (for Xamarin.Android) showing how to use a behavior in an application, just with a snippet of code:
  ```cs
 var mySecondEditText = FindViewById<EditText>(Resource.Id.MySecondEditText);
 mySecondEditText.AttachBehavior(new SelectAllOnFocusBehavior());
@@ -83,10 +83,8 @@ public class HideKeyboardOnEnterKeyBehavior : Behavior<EditText>
  ```
 
 ## Todo
- - Implement behaviors architecture for Xamarin.iOS projects
- - Update Nuget Packages to include the behaviors for Xamarin.iOS
- - Add built-in behaviors for Xamarin.iOS projects
  - Add more built-in behaviors for Xamarin.Android projects
+ - Add more built-in behaviors for Xamarin.iOS projects
 
 ## More Info
  - Want to contribute? We accept any interesting pull requests!

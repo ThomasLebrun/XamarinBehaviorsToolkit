@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Behaviors for Xamarin.Android applications")]
+[assembly: AssemblyProduct("Behaviors for Xamarin.iOS applications")]
 [assembly: AssemblyCopyright("Copyright © Thomas LEBRUN 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

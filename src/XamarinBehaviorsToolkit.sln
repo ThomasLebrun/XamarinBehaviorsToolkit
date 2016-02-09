@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Android.Behaviors",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Android.Behaviors.TestApp", "Xamarin.Android.Behaviors.TestApp\Xamarin.Android.Behaviors.TestApp.csproj", "{E9FE57FC-B8F1-414B-87E4-4F91978FC234}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.iOS.Behaviors", "Xamarin.iOS.Behaviors\Xamarin.iOS.Behaviors.csproj", "{04BB852C-6312-472D-9806-63FFD12ED588}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{90EE49C1-4911-43DF-81CD-322311D1896F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,8 +27,15 @@ Global
 		{E9FE57FC-B8F1-414B-87E4-4F91978FC234}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9FE57FC-B8F1-414B-87E4-4F91978FC234}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E9FE57FC-B8F1-414B-87E4-4F91978FC234}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{04BB852C-6312-472D-9806-63FFD12ED588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BB852C-6312-472D-9806-63FFD12ED588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BB852C-6312-472D-9806-63FFD12ED588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BB852C-6312-472D-9806-63FFD12ED588}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9FE57FC-B8F1-414B-87E4-4F91978FC234} = {90EE49C1-4911-43DF-81CD-322311D1896F}
 	EndGlobalSection
 EndGlobal
