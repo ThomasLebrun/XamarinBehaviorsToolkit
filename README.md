@@ -27,7 +27,7 @@ mySecondEditText.AttachBehavior(new SelectAllOnFocusBehavior());
 
 **Creating a behavior**
 
-Xamarin Behavior Toolkit implement the same architecture as the Microsoft behaviors which can be used in any XAML application. To create your own behavior, you just have to inherit from the **Behavior\<T\>** class and override the methods **OnAttached** and/or **OnDetaching**. To reference the control on which the behavior is attached, you can access the property **AssociatedObject**:
+The Behaviors Toolkit for Xamarin use the same architecture as the Microsoft behaviors which can be used in any XAML application. To create your own behavior, you just have to inherit from the **Behavior\<T\>** class and override the methods **OnAttached** and/or **OnDetaching**. To reference the control on which the behavior is attached, you can access the property **AssociatedObject**:
 ```cs
 /// <summary>
 /// Behavior used on an EditText object and used to hide the software keyboard when one of the following key is pressed: "Done", "Search" or "Go"
@@ -81,6 +81,41 @@ public class HideKeyboardOnEnterKeyBehavior : Behavior<EditText>
     }
 }
  ```
+
+Here is another sample behavior, for Xamarin.iOS applications:
+```cs
+/// <summary>
+/// Behavior used on an EditText object and used to select all the text within it when it has focus
+/// </summary>
+public class SelectAllOnFocusBehavior : Behavior<UITextField>
+{
+    private EventHandler _editingDidBeginEventHandler;
+
+    /// <summary>
+    /// Method to override when the behavior is attached to the view.
+    /// </summary>
+    protected override void OnAttached()
+    {
+        _editingDidBeginEventHandler = (sender, e) =>
+        {
+            this.AssociatedObject.PerformSelector(new Selector("selectAll"), null, 0.0f);
+        };
+
+        this.AssociatedObject.EditingDidBegin += _editingDidBeginEventHandler;
+    }
+
+    /// <summary>
+    /// Method to override when the behavior is removed from the associatedObject.
+    /// </summary>
+    protected override void OnDetaching()
+    {
+        if (_editingDidBeginEventHandler != null)
+        {
+            this.AssociatedObject.EditingDidBegin -= _editingDidBeginEventHandler;
+        }
+    }
+}
+```
 
 ## Todo
  - Add more built-in behaviors for Xamarin.Android projects
